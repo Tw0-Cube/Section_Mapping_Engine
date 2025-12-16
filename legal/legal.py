@@ -7,9 +7,11 @@ import pickle
 import os
 
 # === CONFIG ===
-excel_in = "C:/Users/vijay/OneDrive/Desktop/project/mapping/mapping_v1.xlsx"
-excel_out = "C:/Users/vijay/OneDrive/Desktop/mapping_filled_legal_full.xlsx"
-cache_file = "bns_cache.pkl"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+excel_in = os.path.join(BASE_DIR, "mapping", "mapping_v1.xlsx")
+excel_out = os.path.join(BASE_DIR, "mapping_filled_legal_full.xlsx")
+cache_file = os.path.join(BASE_DIR, "bns_cache.pkl")
 REQUEST_SLEEP = 0.25
 
 # Load cache if exists
