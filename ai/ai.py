@@ -12,4 +12,7 @@ def explain_legal_term(term: str) -> str:
         response = chat.send_message(prompt)
         return response.text
     except Exception as e:
-        return f"Error: {e}"
+        if "429" in str(e):
+            return "AI is temporarily busy. Please try again in a few seconds."
+        else:
+            return ""
