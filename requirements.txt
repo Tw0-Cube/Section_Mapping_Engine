@@ -1,2 +1,6 @@
 flask
 gunicorn
+pandas
+requests
+beautifulsoup4
+google-generativeai
